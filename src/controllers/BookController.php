@@ -11,5 +11,10 @@ class BookController {
     $id = Book::create($name, $description);
     return $id;
   }
+
+  public static function find($id) {
+    $book = Book::find($id);
+    return $book;
+  }
 }
 ?>

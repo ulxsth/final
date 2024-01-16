@@ -39,7 +39,7 @@ class Book {
    * @param int $id 小説のID
    * @return BookDto|null 該当する小説
    */
-  public static function findById($id)
+  public static function find($id)
   {
     $pdo = PdoManager::getPdo();
     $statement = $pdo->prepare('SELECT * FROM books WHERE id = :id');

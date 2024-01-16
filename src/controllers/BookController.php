@@ -6,5 +6,10 @@ class BookController {
     $books = Book::all($limit);
     return $books;
   }
+
+  public static function create($name, $description) {
+    $id = Book::create($name, $description);
+    return $id;
+  }
 }
 ?>

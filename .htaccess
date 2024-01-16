@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^$ /public/views/home.php [L]
+RewriteRule ^$ /final/public/views/home.php [L]
 
-RewriteRule ^books/new$ /public/views/new.php [L]
-ReqriteRule ^books/create$ /public/views/create.php [L]
+RewriteRule ^books/new$ /final/public/views/books/new.php [L]
+RewriteRule ^books/create$ /final/public/views/books/create.php [L]

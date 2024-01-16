@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>新規登録</h1>
-  <form action="/views/books/create.php" method="post">
+  <form action="/books/create" method="post">
     <div>
       <label for="name">名前</label>
       <input type="text" name="name" id="name">

@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/../../../src/controllers/BookController.php';
+
+$books = BookController::all();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -20,9 +26,9 @@
     <tbody>
       <?php foreach ($books as $book) { ?>
         <tr>
-          <td><?php echo $book->name ?></td>
-          <td><?php echo $book->description ?></td>
-          <td><?php echo $book->isRead ? '既読' : '未読' ?></td>
+          <td><?php echo $book->getName() ?></td>
+          <td><?php echo $book->getDescription() ?></td>
+          <td><?php echo $book->getIsRead() ? '既読' : '未読' ?></td>
           <td>
             <a href="/views/books/edit.php?id=<?php echo $book->id ?>">編集</a>
             <a href="/views/books/delete.php?id=<?php echo $book->id ?>">削除</a>

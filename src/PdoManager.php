@@ -1,6 +1,6 @@
 <?php
 class PdoManager {
-  private $pdo;
+  private static $pdo;
 
   public function __construct() {}
 

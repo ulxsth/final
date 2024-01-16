@@ -47,11 +47,8 @@ class Book {
     $statement->execute();
     $book = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if ($book === false) {
-      return null;
-    }
-
-    return self::toDto($book);
+    $dto = self::toDto($book);
+    return $dto;
   }
 
   /**

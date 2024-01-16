@@ -76,10 +76,10 @@ class Book {
   public static function update($book) {
     $pdo = PdoManager::getPdo();
     $statement = $pdo->prepare('UPDATE books SET name = :name, description = :description, is_read = :is_read WHERE id = :id');
-    $statement->bindParam(':name', $book->name, PDO::PARAM_STR);
-    $statement->bindParam(':description', $book->description, PDO::PARAM_STR);
-    $statement->bindParam(':is_read', $book->isRead, PDO::PARAM_BOOL);
-    $statement->bindParam(':id', $book->id, PDO::PARAM_INT);
+    $statement->bindParam(':name', $book->getName(), PDO::PARAM_STR);
+    $statement->bindParam(':description', $book->getDescription(), PDO::PARAM_STR);
+    $statement->bindParam(':is_read', $book->getIsRead(), PDO::PARAM_BOOL);
+    $statement->bindParam(':id', $book->getId(), PDO::PARAM_INT);
     return $statement->execute();
   }
 

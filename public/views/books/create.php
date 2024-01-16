@@ -5,5 +5,5 @@ $name = $_POST['name'];
 $description = $_POST['description'];
 
 $id = BookController::create($name, $description);
-header('Location: /books/' . $id);
+header('Location: /final/books/' . $id);
 ?>

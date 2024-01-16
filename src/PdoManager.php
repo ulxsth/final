@@ -6,7 +6,7 @@ class PdoManager {
 
   public static function getPdo() {
     if(self::$pdo == null) {
-      $config = parse_ini_file('../config.ini');
+      $config = parse_ini_file('../env.ini');
       $host = $config['host'];
       $dbname = $config['dbname'];
       $user = $config['user'];

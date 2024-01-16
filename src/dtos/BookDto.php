@@ -1,5 +1,5 @@
 <?php
-class Book {
+class BookDto {
   public $id;
   public $name;
   public $description;

@@ -27,5 +27,8 @@ class BookDto {
   public function getIsRead() {
     return $this->isRead;
   }
+
+  public function setIsRead($isRead) {
+    $this->isRead = $isRead;
+  }
 }
-?>

@@ -20,7 +20,7 @@ $books = BookController::all();
         <th>名前</th>
         <th>説明</th>
         <th>既読</th>
-        <th>操作</th>
+        <th colspan="1"></th>
       </tr>
     </thead>
     <tbody>
@@ -30,8 +30,11 @@ $books = BookController::all();
           <td><?php echo $book->getDescription() ?></td>
           <td><?php echo $book->getIsRead() ? '既読' : '未読' ?></td>
           <td>
-            <a href="/views/books/edit.php?id=<?php echo $book->id ?>">編集</a>
-            <a href="/views/books/delete.php?id=<?php echo $book->id ?>">削除</a>
+            <?php if ($book->getIsRead()) { ?>
+              <a href="/final/books/uncheck/<?php echo $book->getId() ?>">未読にする</a>
+            <?php } else { ?>
+              <a href="/final/books/check/<?php echo $book->getId() ?>">既読にする</a>
+            <?php } ?>
           </td>
         </tr>
       <?php } ?>

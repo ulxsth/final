@@ -16,5 +16,17 @@ class BookController {
     $book = Book::find($id);
     return $book;
   }
+
+  public static function check($id) {
+    $book = Book::find($id);
+    $book->setIsRead(true);
+    Book::update($book);
+  }
+
+  public static function uncheck($id) {
+    $book = Book::find($id);
+    $book->setIsRead(false);
+    Book::update($book);
+  }
 }
 ?>

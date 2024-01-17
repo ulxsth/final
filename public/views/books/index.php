@@ -15,7 +15,6 @@ $books = BookController::all();
 
 <body>
   <h1>一覧</h1>
-  <a href="/views/books/create.php">新規作成</a>
   <table>
     <thead>
       <tr>

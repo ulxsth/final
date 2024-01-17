@@ -14,6 +14,7 @@ $books = BookController::all();
 </head>
 
 <body>
+  <?php require_once __DIR__ . "/../header.php" ?>
   <h1>一覧</h1>
   <table>
     <thead>
@@ -33,7 +34,7 @@ $books = BookController::all();
           <td>
             <?php if ($book->getIsRead()) : ?>
               <a href="/final/books/<?php echo $book->getId() ?>/uncheck">未読にする</a>
-            <?php else: ?>
+            <?php else : ?>
               <a href="/final/books/<?php echo $book->getId() ?>/check">既読にする</a>
             <?php endif ?>
           </td>

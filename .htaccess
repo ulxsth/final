@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteRule ^$ /final/public/views/home.php [L]
 
+RewriteRule ^books$ /final/public/views/books/index.php [L]
 RewriteRule ^books/new$ /final/public/views/books/new.php [L]
 RewriteRule ^books/create$ /final/public/views/books/create.php [L]
 RewriteRule ^books/([0-9]+)$ /final/public/views/books/show.php?id=$1 [L]

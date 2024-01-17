@@ -12,6 +12,10 @@ class BookController {
     return $id;
   }
 
+  public static function update($book) {
+    Book::update($book);
+  }
+
   public static function find($id) {
     $book = Book::find($id);
     return $book;

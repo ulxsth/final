@@ -32,5 +32,8 @@ class BookController {
     $book->setIsRead(false);
     Book::update($book);
   }
+
+  public static function delete($id) {
+    Book::delete($id);
+  }
 }
-?>

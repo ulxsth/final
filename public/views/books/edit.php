@@ -8,19 +8,23 @@ $description = $book == null ? 'This book has been deleted' : $book->getDescript
 ?>
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $name ?></title>
+  <title>edit: <?php echo $name ?></title>
+  <form action="/final/books/<?php echo $id ?>/update" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<?php echo $name ?>">
+    <label for="description">Description</label>
+    <input type="text" name="description" value="<?php echo $description ?>">
+    <input type="submit" value="submit">
+  </form>
 </head>
+
 <body>
-  <h1><?php echo $name; ?></h1>
-  <p><?php echo $description ?></p>
-  <?php if ($book != null) : ?>
-    <a href="/final/books/<?php echo $id; ?>/edit">編集</a>
-    <a href="/final/books/<?php echo $id; ?>/delete">削除</a>
-  <?php endif; ?>
 
 </body>
+
 </html>

@@ -5,3 +5,4 @@ $id = $_GET['id'];
 BookController::check($id);
 
 header('Location: /final/books');
+
